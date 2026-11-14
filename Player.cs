@@ -17,11 +17,12 @@ public partial class Player : CharacterBody3D
 
 		if (Input.IsActionPressed("move_right"))
 		{
-			direction.Z += 1.0f;
+			direction.Z -= 1.0f;
+			 
 		}
 		if (Input.IsActionPressed("move_left"))
 		{
-			direction.Z -= 1.0f;
+			direction.Z += 1.0f;
 		}
 		
 		if (Input.IsActionPressed("jump"))

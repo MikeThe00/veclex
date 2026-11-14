@@ -25,7 +25,7 @@ transform = Transform3D(-4.222196e-08, -1, -1.1313331e-08, 0.9659259, -4.371139e
 shadow_enabled = true
 
 [node name="player" parent="." unique_id=849406638 instance=ExtResource("1_a202f")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+transform = Transform3D(-0.9996474, 0, -0.0265534, 0, 1, 0, 0.0265534, 0, -0.9996474, 0, -1, 0)
 
 [node name="Camera3D" type="Camera3D" parent="player" unique_id=188420344]
-transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -8, 5, 0)
+transform = Transform3D(0.037661944, 0, -0.9992907, 0, 1, 0, 0.9992907, 0, 0.037661944, -9.220989, 5, 0.07233186)
