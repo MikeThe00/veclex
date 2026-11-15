@@ -18,12 +18,14 @@ albedo_color = Color(0, 0, 0, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3564x"]
 albedo_color = Color(0, 0, 0, 1)
 
-[sub_resource type="Sky" id="Sky_3564x"]
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_a202f"]
 
-[sub_resource type="Environment" id="Environment_r7bme"]
-background_mode = 1
-background_color = Color(0.41977146, 0.43455052, 0.49015915, 1)
-sky = SubResource("Sky_3564x")
+[sub_resource type="Sky" id="Sky_a0tk4"]
+sky_material = SubResource("ProceduralSkyMaterial_a202f")
+
+[sub_resource type="Environment" id="Environment_noarx"]
+background_mode = 2
+sky = SubResource("Sky_a0tk4")
 
 [node name="Main" type="Node3D" unique_id=140866751]
 
@@ -244,13 +246,25 @@ mesh = SubResource("BoxMesh_6m6s6")
 surface_material_override/0 = SubResource("StandardMaterial3D_r7bme")
 
 [node name="Ground12" type="StaticBody3D" parent="." unique_id=1551842984]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.5177602, 0, -28, -135)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.607104, 0, -28, -144)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ground12" unique_id=1692773313]
 transform = Transform3D(0.06999997, 0, 0, 0, 0.90999997, 0, 0, 0, 0.5749923, 0, -4, 5.0541916)
 shape = SubResource("BoxShape3D_6m6s6")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Ground12" unique_id=716496200]
+transform = Transform3D(0.06999997, 0, 0, 0, 0.5759999, 0, 0, 0, 0.6037419, -1, -4, 5.0000305)
+mesh = SubResource("BoxMesh_6m6s6")
+surface_material_override/0 = SubResource("StandardMaterial3D_r7bme")
+
+[node name="Ground23" type="StaticBody3D" parent="." unique_id=1444852786]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.607104, 0, -28, -109)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground23" unique_id=1012429279]
+transform = Transform3D(0.06999997, 0, 0, 0, 0.90999997, 0, 0, 0, 0.5749923, 0, -4, 5.0541916)
+shape = SubResource("BoxShape3D_6m6s6")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground23" unique_id=365420830]
 transform = Transform3D(0.06999997, 0, 0, 0, 0.5759999, 0, 0, 0, 0.6037419, -1, -4, 5.0000305)
 mesh = SubResource("BoxMesh_6m6s6")
 surface_material_override/0 = SubResource("StandardMaterial3D_r7bme")
@@ -315,4 +329,4 @@ mesh = SubResource("BoxMesh_r7bme")
 surface_material_override/0 = SubResource("StandardMaterial3D_3564x")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=770149153]
-environment = SubResource("Environment_r7bme")
+environment = SubResource("Environment_noarx")
