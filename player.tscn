@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://kryoy3h7qf1a"]
 
-[ext_resource type="PackedScene" uid="uid://y7veyuti75d7" path="res://dummypoppy_playtime_player.glb" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://cbqxrkvr8xvde" path="res://Player.cs" id="1_onrkg"]
+[ext_resource type="PackedScene" uid="uid://dhp28usw8hf4j" path="res://third_person_animations.glb" id="2_onrkg"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_r7bme"]
 size = Vector3(2, 3, 0.215271)
@@ -12,8 +12,8 @@ script = ExtResource("1_onrkg")
 
 [node name="Pivot" type="Node3D" parent="." unique_id=1428666641]
 
-[node name="Character" parent="Pivot" unique_id=2118043603 instance=ExtResource("1_4flbx")]
-transform = Transform3D(1.5289571, 0, 0, 0, 1.6187155, 0, 0, 0, 1.4592475, 0, 0, 0)
+[node name="Character" parent="Pivot" unique_id=298665768 instance=ExtResource("2_onrkg")]
+transform = Transform3D(2.1875687, 0, 0, 0, 3.3764014, 0, 0, 0, 1.9029379, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1246044289]
 transform = Transform3D(1, 0, 0, 0, 1.9200001, 0, 0, 0, 6.8800006, -0.154, 2.9, 0.001)

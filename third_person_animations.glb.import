@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://y7veyuti75d7"
-path="res://.godot/imported/dummypoppy_playtime_player.glb-8d428379a85270b2537b4cd908cbed0a.scn"
+uid="uid://dhp28usw8hf4j"
+path="res://.godot/imported/third_person_animations.glb-eb9f303c52334d7e1712fd586755491e.scn"
 
 [deps]
 
-source_file="res://dummypoppy_playtime_player.glb"
-dest_files=["res://.godot/imported/dummypoppy_playtime_player.glb-8d428379a85270b2537b4cd908cbed0a.scn"]
+source_file="res://third_person_animations.glb"
+dest_files=["res://.godot/imported/third_person_animations.glb-eb9f303c52334d7e1712fd586755491e.scn"]
 
 [params]
 
