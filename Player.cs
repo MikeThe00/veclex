@@ -2,6 +2,10 @@ using Godot;
 
 public partial class Player : CharacterBody3D
 {
+	[Export]
+	public AnimationTree anim_tree {get; set;} 
+	
+	//anim_tree.Active = true;
 	// How fast the player moves in meters per second.
 	[Export]
 	public int Speed { get; set; } = 14;
@@ -19,11 +23,18 @@ public partial class Player : CharacterBody3D
 		if (Input.IsActionPressed("move_right"))
 		{
 			direction.Z -= 1.0f;
+			anim_tree.Set("parameters/Transition/transition_request", "run");
 			 
 		}
+		
+		if(Input.IsAnythingPressed() == false){
+			anim_tree.Set("parameters/Transition/transition_request", "idle");
+		}
+		
 		if (Input.IsActionPressed("move_left"))
 		{
 			direction.Z += 1.0f;
+			anim_tree.Set("parameters/Transition/transition_request", "run");
 		}
 		
 		if (IsOnFloor() && Input.IsActionJustPressed("jump"))
