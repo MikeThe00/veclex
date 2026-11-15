@@ -7,7 +7,7 @@ public partial class Player : CharacterBody3D
 	public int Speed { get; set; } = 14;
 	// The downward acceleration when in the air, in meters per second squared.
 	[Export]
-	public int JumpImpulse { get; set; } = 20;
+	public int JumpImpulse { get; set; } = 40;
 	public int FallAcceleration { get; set; } = 75;
 
 	private Vector3 _targetVelocity = Vector3.Zero;
