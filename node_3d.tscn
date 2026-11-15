@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dl6a7h51ggpdk"]
 
 [ext_resource type="PackedScene" uid="uid://kryoy3h7qf1a" path="res://player.tscn" id="1_a202f"]
+[ext_resource type="Script" uid="uid://0s1nitex36m8" path="res://Node3d.cs" id="1_noarx"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6m6s6"]
 size = Vector3(60, 2, 60)
@@ -27,7 +28,9 @@ sky_material = SubResource("ProceduralSkyMaterial_a202f")
 background_mode = 2
 sky = SubResource("Sky_a0tk4")
 
-[node name="Main" type="Node3D" unique_id=140866751]
+[node name="Main" type="Node3D" unique_id=140866751 node_paths=PackedStringArray("_button")]
+script = ExtResource("1_noarx")
+_button = NodePath("Control/Button")
 
 [node name="Ground" type="StaticBody3D" parent="." unique_id=261781921]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
@@ -330,3 +333,17 @@ surface_material_override/0 = SubResource("StandardMaterial3D_3564x")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=770149153]
 environment = SubResource("Environment_noarx")
+
+[node name="Control" type="Control" parent="." unique_id=467947780]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="Control" unique_id=571317160]
+layout_mode = 0
+offset_right = 29.0
+offset_bottom = 15.0
+text = "Retry"
+
+[connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
