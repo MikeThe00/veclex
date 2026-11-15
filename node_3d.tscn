@@ -18,13 +18,6 @@ albedo_color = Color(0, 0, 0, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3564x"]
 albedo_color = Color(0, 0, 0, 1)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_3yigi"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_ib3kf"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n6jik"]
-albedo_color = Color(0, 0, 0, 1)
-
 [node name="Main" type="Node3D" unique_id=140866751]
 
 [node name="Ground" type="StaticBody3D" parent="." unique_id=261781921]
@@ -58,13 +51,3 @@ shape = SubResource("BoxShape3D_3564x")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=548771641]
 mesh = SubResource("BoxMesh_r7bme")
 surface_material_override/0 = SubResource("StandardMaterial3D_3564x")
-
-[node name="AnimatableBody3D" type="AnimatableBody3D" parent="." unique_id=2036487837]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3736596, -4.0823126)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D" unique_id=1804350844]
-shape = SubResource("BoxShape3D_3yigi")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="AnimatableBody3D" unique_id=465924351]
-mesh = SubResource("BoxMesh_ib3kf")
-surface_material_override/0 = SubResource("StandardMaterial3D_n6jik")
